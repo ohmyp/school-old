@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* Background */
+body {
+  background: url('../images/school.jpg') no-repeat center center fixed;
+  -moz-background-size: 100%;
+  -webkit-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cover {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+/* Header  */
+header {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  padding-top: 2%;
+  flex: 1;
+}
+
+.content-header {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 5%;
+  color: white;
+  font-weight: bolder;
+  font-size: 2rem;
+}
+
+.logo {
+  width: 100px;
+  cursor: pointer;
+  transition: ease 0.25s;
+  z-index: 3;
+}
+
+.logo:hover {
+  filter: brightness(.8);
+}
+
+/* Content */
+.content {
+  flex: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  align-items: center;
+}
+
+.content .school-name {
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
+.content .title-text {
+  font-size: 3rem;
+  font-weight: lighter;
+}
+
+.content .title-text span {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+/* Links */
+.links {
+  min-height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  bottom: 0;
+  flex-direction: row;
+  cursor: pointer;
+}
+
+.link {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  color: white;
+  min-width: 21%;
+  padding: 2%;
+  text-align: left;
+  transition: 0.25s ease;
+}
+
+.link h3 {
+  font-size: 1.6rem;
+  margin-top: 0;
+}
+
+.link.link1 {
+  background: linear-gradient(to right, #8e9d96CC, #8e9d96);
+}
+
+.link.link1:hover {
+  background-color: #8e9d96;
+}
+
+.link.link2 {
+  background: linear-gradient(to right, #aabdceCC, #aabdce);
+}
+
+.link.link2:hover {
+  background-color: #aabdce;
+}
+
+.link.link3 {
+  background: linear-gradient(to right, #b9c1c4CC, #b9c1c4);
+}
+
+.link.link3:hover {
+  background-color: #b9c1c4;
+}
+
+.link.link4 {
+  background: linear-gradient(to right, #8fa09aCC, #8fa09a);
+}
+
+.link.link4:hover {
+  background-color: #8fa09a;
+}
+.link.inactive{
+  background: #989898;
+}
+.link.inactive:hover{
+  background: #989898;
+
+}
+
+/* Adaptation to Mobile */
+@media (max-width:991px) {
+  body {
+    overflow: visible;
+    overflow-x: hidden;
+  }
+
+  .content-header {
+    font-size: 1.2rem
+  }
+
+  .logo {
+    width: 50px;
+  }
+
+  .links {
+    flex-direction: column;
+  }
+  .school-name,
+  .title-text{
+    padding: 0 10px;
+  }
+  .content .school-name {
+    font-size: 1rem;
+    margin: 20px 0;
+  }
+
+  .content .title-text {
+    font-size: 2rem;
+    font-weight: lighter;
+    margin-top: 0;
+  }
+
+  .content .title-text span {
+    font-size: 2.2rem;
+    font-weight: bold;
+  }
+  .link.inactive{
+    background: #989898;
+  }
+  .link.inactive:hover{
+    background: #989898;
+  
+  }
+
+}

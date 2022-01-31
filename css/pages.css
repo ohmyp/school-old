@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+    --background-color: #0A1931;
+    --primary-color: #39A2DB;
+    --accent-color: #9aa0a2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+.large_title {
+    font-weight: 700;
+    font-size: 2.6rem;
+    margin: 10px 0;
+}
+
+.small_title {
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin: 10px 0;
+}
+
+.large_subtitle {
+    color: var(--accent-color);
+    font-weight: 300;
+    font-size: 1.4rem;
+}
+
+.small_subtitle {
+    color: var(--accent-color);
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+/* Background */
+body {
+    background: var(--background-color);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+}
+
+/* LOGO STARTS */
+.logo {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0 20px 10px;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.logo img {
+    width: 30px;
+    margin: 0 10px 0 0;
+}
+
+/* LOGO ENDS */
+
+/* MENU STARTS */
+.menu {
+    padding: 0px 20px 0px 10px;
+    position: sticky;
+    top: 0;
+    flex-grow: 0;
+    min-width: 250px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+}
+
+.small_subtitle.in_menu {
+    padding: 0 20px;
+    color: white;
+}
+
+/* MENU BUTTONS STARTS */
+.menu_button {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.25s;
+    font-weight: 400;
+}
+
+.menu_button.active,
+.menu_button:hover {
+    background-color: var(--primary-color);
+}
+
+.banner {
+    border: 2px var(--primary-color) solid;
+}
+
+/* MENU BUTTONS ENDS */
+
+/* FOOTER STARTS */
+.footer.mobile {
+    display: none;
+}
+
+.footer {
+    width: 100%;
+    transform: translate(-10px, -15px);
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer_links i {
+    margin: 15px 20px 5px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.footer_links i:hover {
+    color: var(--primary-color);
+}
+
+/* FOOTER ENDS */
+
+/* CARDS STARTS */
+.cards {
+    margin: 10px;
+    padding: 30px;
+    flex-grow: 1;
+    border-radius: 25px;
+    background-color: white;
+    color: var(--background-color);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 20px 0;
+}
+
+hr {
+    height: 2px;
+    border: none;
+    background-color: var(--accent-color);
+}
+
+.block_names {
+    margin-bottom: 20px;
+}
+
+/* ITEMS STARTS */
+.items {
+    flex-wrap: wrap;
+    display: none;
+    flex-direction: row;
+}
+
+.items.shown {
+    display: flex;
+
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 25px;
+    border: solid 3px var(--background-color);
+    flex: 1 0 34%;
+    margin: 0 10px 10px 0;
+
+}
+
+.item_title {
+    font-size: 1.6rem;
+}
+
+.item_subtitle {
+    margin: 10px 0;
+}
+
+/* .item_button {
+    position: relative;
+    background-color: var(--background-color);
+    color: white;
+    padding: 15px;
+    width: fit-content;
+    border-radius: 15px;
+    border: 3px solid var(--background-color);
+    transition: 0.25s;
+    cursor: pointer;
+    margin: 10px 10px 10px 0;
+    
+} */
+
+.item_button {
+    background-color: var(--background-color);
+    color: white;
+    border-radius: 15px;
+    border: 3px solid var(--background-color);
+    margin: 10px 10px 10px 0;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item_button:hover {
+    color: var(--background-color);
+    background-color: white;
+
+}
+
+.buttons_div {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* ITEMS ENDS */
+/* CARDS ENDS */
+
+/* TEST STARTS */
+.test button {
+    border: none;
+    color: white;
+    background-color: var(--primary-color);
+    min-height: 50px;
+    min-width: 100px;
+    border-radius: 5px;
+    margin: 25px;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.test button:active {
+    background-color: var(--background-color);
+}
+.results{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.result {
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    justify-content: space-between;
+}
+
+.results input {
+    min-width: 50%;
+    border-radius: 10px;
+    border: 3px solid black;
+    min-height: 30px;
+    font-size: 1.6rem;
+    margin: 10px 0;
+}
+
+.indicator p {
+    margin: 10px;
+}
+
+details {
+    font-size: 1.4rem;
+}
+
+details p {
+    margin: 10px 0;
+}
+
+details p span {
+    font-weight: bold;
+}
+
+/* TEST ENDS */
+
+@media (max-width: 771px) {
+
+    .large_title {
+        font-size: 2rem;
+    }
+
+    .large_subtitle {
+        font-size: 1.2rem;
+
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .menu {
+        position: relative;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .footer {
+        transform: none;
+    }
+
+    .footer.desktop {
+        display: none;
+    }
+
+    .footer.mobile {
+        position: relative;
+        margin-bottom: 20px;
+        display: block;
+    }
+
+    .menu_buttons {
+        display: none;
+    }
+
+    .item {
+        flex: 1 100%;
+    }
+
+    .indicator {
+        width: 90%;
+    }
+
+    .cards {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .test button {
+        min-height: 50px;
+        min-width: 80px;
+        border-radius: 5px;
+        margin: 10px;
+        font-size: 1.4rem;
+        cursor: pointer;
+    }
+
+    .buttons_div {
+        flex-wrap: wrap;
+    }
+
+    .item_button {
+        flex: 1 0 34%;
+    }
+    .item_button p {
+        font-size: 1.2rem;
+    }
+}
